@@ -1,0 +1,136 @@
+<div class="bg-default-light">
+    <div class="text-center mb0 pt0">
+        <center style='background-color: #2e5f91'>
+            <img class="pt20" src="../../../img/Logo.png" width="250" height="70" alt="gf_logo"/>
+            <h1 class="mt10 pb5 mb0" style="font-family: 'Times New Roman', Times, serif;color: #b4aaa4">Loyalty Registration</h1>
+
+        </center>
+        <!--mr mis-->
+        <div class="col-lg-2 col-md-1 col-xs-12">
+
+        </div>
+        <div class="col-lg-8 col-md-10 col-xs-12 pr0">
+            <div class="row mr0">
+                <div class="col-lg-12 col-md-12 col-xs-12 no-padding" style="height: calc(100vh - 350px)">
+                    <img src="../../../img/imageMain.png" width="100%" height="100%" alt="imageMain"/>
+
+                </div>
+            </div>
+            <div class="row mr0">
+                <div class="col-lg-12 col-md-12 col-xs-12 pl20">
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden;display: flex">
+                        <input type="text" class="form-control-2" placeholder="Mobile No" ng-model="model.loyalty.mobileNo" ng-blur="ui.checkMobile()" ng-change="ui.mobileChange()">
+                        <a class="glyphicon glyphicon-fullscreen pt30" style="right: 45px" ng-show="ui.otp" ng-click="ui.viewOTPValidateionModel()"></a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding"  style="overflow-x: hidden">
+                        <!--<input type="text" class="form-control-2" placeholder="Mr Miss Mrs" ng-model="model.loyalty.recidance">-->
+                        <select class='form-control-2' style="padding-top: 4px" ng-model="model.loyalty.recidance">
+                            <option value="">Mr Miss Mrs</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Mrs">Mrs</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <input type="text" class="form-control-2" placeholder="Name" ng-model="model.loyalty.name">
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <input type="text" class="form-control-2" placeholder="NIC" ng-model="model.loyalty.nic">
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <input type="text" class="form-control-2" placeholder="Email" ng-model="model.loyalty.email">
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <input type="text" class="form-control-2" placeholder="City" ng-model="model.loyalty.city">
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <!--<input type="text" class="form-control-2" placeholder="Month" onfocus = "(this.type = 'date')"  ng-model="model.loyalty.bMonth">-->
+                        <input type="month" class="form-control-2 pt0" name="dob" data-placeholder="Year and Month " 
+                               required aria-required="true" ng-model="model.loyalty.yearMonth" />
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                         <select class='form-control-2' ng-model="model.loyalty.bDate">
+                             <option value="">Day 
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                             </option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-xs-6 no-padding" style="overflow-x: hidden">
+                        <input type="text" class="form-control-2" placeholder="Address" ng-model="model.loyalty.address">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-xs-12 col-lg-12 mt10">
+                <button class="btn btn-primary pull-right" style="width: 150px;" ng-click="ui.checkValidation()" type="button">Save</button> 
+                <button class="btn btn-warning pull-right mr20" style="width: 150px;" ng-click="ui.reset()" type="button">Clear</button> 
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-1 col-xs-12 pt15">
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="otpValidation.html">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title text-center h3 col-md-11 col-xs-11" ><b>Validation Code</b></h5>
+    <button type="button" class="close col-md-1 col-xs-1 bold" data-dismiss="modal" aria-label="Close" ng-click="ui.modelCancel()">
+    <span aria-hidden="true" class="pull-right">&times;</span>
+    </button><br><br>
+    <p class="text-center col-md-11 col-xs-11" >Please Enter the Validation code sent to your mobile {{model.loyalty.mobileNo}}</p>
+    </div>
+    <div class="modal-body">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+    <input type="number" class="form-control" placeholder="Enter OTP Code.. " ng-model="model.loyalty.userOtp">
+    </div>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-show='ui.otpType === "mobile" ' ng-click="ui.checkOtpCode()">Validate</button>
+    <button type="button" class="btn btn-primary" ng-show='ui.otpType !== "mobile" ' ng-click="ui.save()">Validate</button>
+    <button type="button" class="btn btn-warning pull-left" ' ng-click="ui.resentOtp()">Re Sent OTP Code
+    </button>
+    </div>
+    </div>
+</script>

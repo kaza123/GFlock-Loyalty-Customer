@@ -1,0 +1,14 @@
+LoyaltyCustomerRegistration/target/
+
+LoyaltyCustomerRegistration/node_modules/
+
+LoyaltyCustomerRegistration/bower_components/
+
+LoyaltyCustomerRegistration/src/main/resources/static/
+
+LoyaltyCustomerRegistration/debug.log
+
+LoyaltyCustomerRegistration/src/main/resources/META-INF/persistence.xml
+
+LoyaltyCustomerRegistration/src/main/resources/application.properties
+LoyaltyCustomerRegistration/nb-configuration.xml

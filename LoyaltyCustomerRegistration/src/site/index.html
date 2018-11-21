@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>GFlock Loyalty Registration</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="img/title_loyalty.png">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!--css-->
+        <!-- inject:css -->
+        <!-- endinject -->
+
+    </head>
+
+    <body onload="myFunction()" ng-app="AppModule">
+
+        <div class="main-content no-padding bg-white no-margin border" ng-view>
+            
+        </div>
+
+
+        <!--js-->
+        <!-- inject:js -->
+        <!-- endinject -->
+
+        <script>
+                    var myVar;
+
+                    function myFunction() {
+                        myVar = setTimeout(showPage, 1000);
+                    }
+
+                    function showPage() {
+                        document.getElementById("loader").style.display = "none";
+                        document.getElementById("myDiv").style.display = "block";
+                    }
+        </script>
+        <!--created by kasun chamara <chamara.kaza@gmail.com>-->
+    </body>
+</html>

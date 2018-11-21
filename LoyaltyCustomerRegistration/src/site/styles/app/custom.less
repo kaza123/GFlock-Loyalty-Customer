@@ -1,0 +1,43 @@
+.display-3{
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+.fab-container{
+    position: absolute;
+    display: block;
+    right: 50px; 
+    bottom: 80px;
+    margin: auto;
+    opacity: 1.0;
+    font-weight: bold;
+}
+.fab-container:hover{
+    opacity: 1;
+}
+.pager li>a:hover {
+    background-color: #f3001e;
+    opacity: 0.5;
+    color: white;
+    font-weight: bold;
+}
+.form-control-2{
+    box-sizing: border-box;
+    outline: none;
+    display: block;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 0px;
+    font: 16px Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+}
+
+/*month placeholder*/
+input[type="month"]::before { 
+	content: attr(data-placeholder);
+	width: 100%;
+}
+input[type="month"]:focus::before,
+input[type="month"]:valid::before { display: none }
