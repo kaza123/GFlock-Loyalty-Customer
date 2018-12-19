@@ -5,11 +5,11 @@
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.supervision.db</groupId>
-    <artifactId>Loyalty_Registration</artifactId>
+    <artifactId>GFlock-Loyalty-Customer</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     
-    <name>loyalty_customer_registration</name>
+    <name>GFlock-Loyalty-Customer</name>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -86,6 +86,7 @@
                                 }
                         );
                     } else if ($scope.ui.validateMobile === $scope.model.loyalty.mobileNo) {
+                        console.log( $scope.ui.otp + "" , $scope.model.loyalty.userOtp + "" , 1);
                         if ($scope.ui.otp + "" === $scope.model.loyalty.userOtp + "") {
 
                             var detail = $scope.model.loyalty;
@@ -139,16 +140,19 @@
 //                        $scope.ui.modelCancel();
                         $scope.ui.reset();
                     }
+                    console.log($scope.ui.otp + "" , $scope.model.loyalty.userOtp + "" , 2);
                     if ($scope.ui.otp + "" === $scope.model.loyalty.userOtp + "") {
 //                        $scope.ui.save();
                         $scope.model.loyalty = {};
                         Notification.success("Already Entered !");
                         $scope.model.loyalty = $scope.ui.selectedLoyalty;
+                        $scope.model.loyalty.bDate = $scope.ui.selectedLoyalty.bDate+"";
 
                         $scope.model.loyalty.mobileNo = "0" + $scope.ui.selectedLoyalty.mobileNo.substring(2, 11);
                         $scope.ui.modelCancel();
                     } else {
                         Notification.error("Enter correct OTP code");
+                        $scope.ui.otpValidateCount++;
                     }
                 };
 
@@ -185,7 +189,7 @@
                         Notification.error("Please Enter the day");
                         check = false;
                     }
-                    if ($scope.model.loyalty.bDate && (!$scope.model.loyalty.bYear || $scope.model.loyalty.bMonth)) {
+                    if ($scope.model.loyalty.bDate && (!$scope.model.loyalty.bYear || !$scope.model.loyalty.bMonth)) {
                         Notification.error("Please Enter the year and month");
                         check = false;
                     }
@@ -232,7 +236,9 @@
                 };
 
                 $scope.ui.save = function () {
-                    if ($scope.ui.otp + "" === $scope.model.loyalty.userOtp + "") {
+                    console.log($scope.ui.otp + "" , $scope.model.loyalty.userOtp + "");
+                    
+                    if ($scope.ui.otp + "" === $scope.model.loyalty.userOtp + "" , 3 ) {
                         var detail = $scope.model.loyalty;
                         var detailJSON = JSON.stringify(detail);
 
@@ -255,10 +261,10 @@
 
                 $scope.ui.init = function () {
 //                    $location.path('/home');
-                    $scope.ui.selectedLoyalty.yearMonth = new Date('2000-12-01');
-                    $scope.ui.selectedLoyalty.dYear = "2000";
-                    $scope.ui.selectedLoyalty.dMonth = "12";
-                    $scope.ui.selectedLoyalty.dDate = "12";
+//                    $scope.ui.selectedLoyalty.yearMonth = new Date('2000-12-01');
+//                    $scope.ui.selectedLoyalty.dYear = "2000";
+//                    $scope.ui.selectedLoyalty.dMonth = "12";
+//                    $scope.ui.selectedLoyalty.dDate = "12";
                 };
                 $scope.ui.init();
             });

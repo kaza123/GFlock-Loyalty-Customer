@@ -15,26 +15,26 @@ import java.math.BigDecimal;
 public class MLoyaltyCheck implements Serializable{
 
     private String titel;//Mr Miss Mrs
-    private String name;// 
+    private String name;
     private String nic;
     private String loyaltyNo;
     private String mobileNo;
     private String birthDay;// 1992-04-27
-    private Integer itemCount;
+    private String loyaltyType;
     private BigDecimal itemValue;
+    private Integer itemCount;
+    private Integer maxItem;
     private String discountType;//Normal_Disc SMS_Code
     private BigDecimal discountPer;
     private String pointType;//Birthday Slab Special_Day
     private BigDecimal point;
     private BigDecimal availablePoint;
     private BigDecimal defaultPoint;
-    private String loyaltyType;
-    private Integer maxItem;
 
     public MLoyaltyCheck() {
     }
 
-    public MLoyaltyCheck(String titel, String name, String nic, String loyaltyNo, String mobileNo, String birthDay, Integer itemCount, BigDecimal itemValue, String discountType, BigDecimal discountPer, String pointType, BigDecimal point, BigDecimal availablePoint, BigDecimal defaultPoint, String loyaltyType, Integer maxItem) {
+    public MLoyaltyCheck(String titel, String name, String nic, String loyaltyNo, String mobileNo, String birthDay, Integer itemCount, BigDecimal itemValue, String discountType, BigDecimal discountPer, String pointType, BigDecimal point, BigDecimal availablePoint, String loyaltyType, Integer maxItem) {
         this.titel = titel;
         this.name = name;
         this.nic = nic;
@@ -48,7 +48,6 @@ public class MLoyaltyCheck implements Serializable{
         this.pointType = pointType;
         this.point = point;
         this.availablePoint = availablePoint;
-        this.defaultPoint = defaultPoint;
         this.loyaltyType = loyaltyType;
         this.maxItem = maxItem;
     }
@@ -182,7 +181,7 @@ public class MLoyaltyCheck implements Serializable{
     }
    
       public MLoyaltyCheck nullModel() {
-          return new MLoyaltyCheck(titel, name, nic,loyaltyNo,mobileNo, birthDay, 0, new BigDecimal(0), discountType, BigDecimal.ZERO, pointType, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, loyaltyType, 0);
+          return new MLoyaltyCheck(titel, name, nic,loyaltyNo,mobileNo, birthDay, 0, new BigDecimal(0), discountType, BigDecimal.ZERO, pointType, BigDecimal.ZERO, BigDecimal.ZERO, loyaltyType, 0);
       }
 
   

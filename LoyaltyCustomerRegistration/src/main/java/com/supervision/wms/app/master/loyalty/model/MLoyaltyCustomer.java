@@ -258,8 +258,7 @@ public class MLoyaltyCustomer implements Serializable {
     }
 
     public boolean isValid() {
-        System.out.println("indexNo "+indexNo);
-        return indexNo != null && mobileNo != null && loyaltyNo != null;
+        return indexNo != null || indexNo<=0;
     }
 
 }
